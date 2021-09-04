@@ -1,0 +1,36 @@
+
+
+#navbar{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  line-height: 50px;
+  background-color: #ddc8a0;
+
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#navbar ul{
+  display: contents;
+}
+
+#navbar li{
+  list-style: none;
+  margin: 3vw;
+}
+
+#navbar img{
+  height: 40px;
+  width: 40px;
+  margin-left: 1vw;
+  margin-top: 3vh;
+}
