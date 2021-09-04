@@ -5,18 +5,6 @@ import './navbar.css';
 import './footer.css';
 import './content.css';
 
-export function loadHomePage(){
-
-  const contentWrapper = document.querySelector('#content');
-
-  contentWrapper.style.backgroundImage =
-  'url(' + backgroundImage + ')';
-
-  const mainContent = createHomePageContent();
-  contentWrapper.appendChild(mainContent);
-
-}
-
 export function startWebsite(){
   const contentWrapper = document.querySelector('#content');
 
@@ -35,7 +23,7 @@ export function startWebsite(){
   contentWrapper.appendChild(footer);
 }
 
-export function createNavbar(){
+function createNavbar(){
   //creating the navbar in memory
   const navbar = document.createElement('nav');
 
@@ -85,7 +73,7 @@ function createLink(link){
   return linkElement;
 }
 
-export function createFooter(){
+function createFooter(){
   const footer = document.createElement('footer');
 
   //creating an unordered list
@@ -107,7 +95,19 @@ export function createFooter(){
   return footer;
 }
 
-export function createHomePageContent(){
+export function loadHomePage(){
+
+  const contentWrapper = document.querySelector('#content');
+
+  contentWrapper.style.backgroundImage =
+  'url(' + backgroundImage + ')';
+
+  const mainContent = createHomePageContent();
+  contentWrapper.appendChild(mainContent);
+
+}
+
+function createHomePageContent(){
   const mainContent = document.createElement('div');
   const ourStory = document.createElement('div');
 
