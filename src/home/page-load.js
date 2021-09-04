@@ -1,9 +1,23 @@
 import image from './burger-logo.png';
+import backgroundImage from
+'./homepage-background.jpg';
 import './navbar.css';
 import './footer.css';
 import './content.css';
 
 export function loadHomePage(){
+
+  const contentWrapper = document.querySelector('#content');
+
+  contentWrapper.style.backgroundImage =
+  'url(' + backgroundImage + ')';
+
+  const mainContent = createHomePageContent();
+  contentWrapper.appendChild(mainContent);
+
+}
+
+export function startWebsite(){
   const contentWrapper = document.querySelector('#content');
 
   contentWrapper.setAttribute('id','content');
@@ -14,7 +28,6 @@ export function loadHomePage(){
 
   //mainContent goes here
   const mainContent = createHomePageContent();
-  mainContent.setAttribute('id','main-content');
   contentWrapper.appendChild(mainContent);
 
   //footer
@@ -102,7 +115,7 @@ export function createHomePageContent(){
   restaurantName.textContent = 'Burgers and Steak';
 
   const ourStoryParagraph = document.createElement('p');
-  ourStoryParagraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  ourStoryParagraph.textContent = "Here at Burgers and Steak we pride ourselves in cooking the best beef in town, blah blah blah";
 
   ourStory.setAttribute('id','our-story');
 
@@ -114,6 +127,12 @@ export function createHomePageContent(){
   for(let i = 0; i < 3; i++){
     ourStory.appendChild(ourStoryArray[i]);
   }
+
+  mainContent.setAttribute('id','main-content');
+  //changing the background of the page wrapper
+  document.querySelector('#content').
+  style.backgroundImage =
+  'url(' + backgroundImage + ')';
 
   mainContent.appendChild(ourStory);
   return mainContent;

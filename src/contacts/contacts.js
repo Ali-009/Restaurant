@@ -1,7 +1,7 @@
 
 import '../home/navbar.css';
 import '../home/footer.css';
-import backgroundImage from './background-image-1.jpg';
+import backgroundImage from './contacts-page-background.jpg';
 
 export function loadContactsPage(){
 
@@ -11,7 +11,6 @@ export function loadContactsPage(){
   'url(' + backgroundImage + ')';
 
   const mainContent = createMainContent();
-  mainContent.setAttribute('id','main-content');
   contentWrapper.appendChild(mainContent);
 
 }
@@ -36,7 +35,7 @@ function createMainContent(){
   for(let i = 0; i < 3; i++){
     ourStory.appendChild(ourStoryArray[i]);
   }
-
+  mainContent.setAttribute('id','main-content');
   mainContent.appendChild(ourStory);
   return mainContent;
 
