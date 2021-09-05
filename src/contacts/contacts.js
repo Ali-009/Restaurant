@@ -27,7 +27,7 @@ function createMainContent(){
   const contactText = [];
   contactText[0] = `Joe Doe
 joe.doe@burgerandsteaks.com`;
-  contactText[1] = `Eugene H.Krabs
+  contactText[1] = `Eugene H. Krabs
 eugene.krabs@burgersandsteaks.com`;
   contactText[2] = `Bob Burger
 bob.burger@burgerandsteaks.com`;
