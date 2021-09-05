@@ -1,5 +1,24 @@
-/*#contacts-content{
-  background-image: url('./background-image-1.jpg');
-  background-size: cover;
+#contacts-list{
+  white-space: pre-wrap;
 
-}*/
+  display: flex;
+  flex-flow: wrap column;
+  padding: 10px;
+
+  max-width: 25vw;
+  min-height: 25vh;
+
+  margin-top: 10vh;
+  margin-left: 5vw;
+
+  color: #fff;
+  background: rgba(117, 138, 16, 0.72);
+
+  list-style: none;
+
+  padding-top: 20px;
+}
+
+#contacts-list li {
+  margin-bottom: 15px;
+}
