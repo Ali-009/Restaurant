@@ -35,6 +35,9 @@ function createMenuPageContent(){
   const burgerMenu = createBurgerMenu();
   mealMenu.appendChild(burgerMenu);
 
+  const steakMenu = createSteakMenu();
+  mealMenu.appendChild(steakMenu);
+
   return mealMenu;
 
 }
@@ -50,16 +53,36 @@ function createBurgerMenu(){
   //2D Array contianing all burger text
   const burgerText = [cheeseBurgerText, chickenBurgerText, veggieBurgerText];
 
-  //separate containers for burgers
-  const burgerMealsContainer = document.createElement('div');
-  burgerMealsContainer.setAttribute('id','burger-meals-container');
+  return createMealsContainer(burgerImgSrcs, burgerText);
+}
 
-  const burgerMeal = createMealDivs(burgerImgSrcs, burgerText);
+function createSteakMenu(){
+  //An array of img sources for steaks
+  const steakImgSrcs = [filletSteakImg, ribEyeSteakImg, tBoneSteakImg];
+
+  const filletSteakText = ['Fillet Steak', 'Just like boneless pizza, a fillet has no bones', 'Price: 10$'];
+  const ribEyeSteakText = ['Rib-Eye Steak', 'Also boneless steak, we just charge more cause it sounds cooler', 'Price: 15$'];
+  const tBoneSteakText = ['T-Bone Steak', 'If you couldn\'t tell, it\'s called t-bone cause the bone is shaped like a \'T\'', 'Price: 15$'];
+
+  //2D Array containing all steak text
+  const steakText = [filletSteakText, ribEyeSteakText, tBoneSteakText];
+
+  return createMealsContainer(steakImgSrcs, steakText);
+}
+
+//creates a flex row for meals of one type
+function createMealsContainer(mealImgSrcs, mealText){
+  //Each meal type has a separate container
+  const mealsContainer = document.createElement('div');
+  mealsContainer.setAttribute('class', 'meals-container');
+
+  //An array of meals of a type
+  const meal = createMealDivs(mealImgSrcs, mealText);
   for(let i = 0; i < 3; i++){
-    burgerMealsContainer.appendChild(burgerMeal[i]);
+    mealsContainer.appendChild(meal[i]);
   }
 
-  return burgerMealsContainer;
+  return mealsContainer;
 }
 
 function createMealDivs(mealImgSrcs, mealText){
