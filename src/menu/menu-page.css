@@ -1,0 +1,40 @@
+
+#meal-menu{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#burger-meals-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.meal{
+  display: flex;
+  flex-flow: row;
+  max-width: 400px;
+  background-color: rgba(18,159,174,.54);
+}
+
+/*#content{
+  background-image: url('./menu-background.png');
+  background-repeat: repeat-x;
+  background-size: auto;
+}*/
+
+.meal img{
+  max-width: 200px;
+  flex-grow: 2;
+}
+
+.meal-description{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+  justify-content: space-between;
+}

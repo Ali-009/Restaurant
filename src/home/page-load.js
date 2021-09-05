@@ -101,6 +101,8 @@ export function loadHomePage(){
 
   contentWrapper.style.backgroundImage =
   'url(' + backgroundImage + ')';
+  contentWrapper.style.backgroundRepeat = 'none';
+  contentWrapper.style.backgroundSize = 'cover';
 
   const mainContent = createHomePageContent();
   contentWrapper.appendChild(mainContent);

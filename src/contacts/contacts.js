@@ -10,6 +10,8 @@ export function loadContactsPage(){
 
   contentWrapper.style.backgroundImage =
   'url(' + backgroundImage + ')';
+  contentWrapper.style.backgroundRepeat = 'none';
+  contentWrapper.style.backgroundSize = 'cover';
 
   const mainContent = createMainContent();
   contentWrapper.appendChild(mainContent);
